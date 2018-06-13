@@ -13,7 +13,8 @@ app.use(cors())
 let port = process.env.PORT || 8080
 
 // send a string to all requestors 
-app.get('*', (request, response) => {
+app.get('*/:text', (request, response) => {
+  console.log(`🍆 somebody said: ${request.params.text}`)
   response.send(`hey hey hey, I'm an express server yay`)
 })
 
