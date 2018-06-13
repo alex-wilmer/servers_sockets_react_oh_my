@@ -27,14 +27,20 @@ class App extends React.Component {
     return (
       <div>
         <h1>servers sockets react oh my</h1>
-        <input
-          value={this.state.apiUri}
-          onChange={event => this.setState({ apiUri: event.target.value })}
-        />
+        <div>
+          <b>http://</b>
+          <input
+            value={this.state.apiUri}
+            onChange={event => this.setState({ apiUri: event.target.value })}
+          />
+        </div>
+        <div>
+        <b>message: </b>
         <input
           value={this.state.requestText}
           onChange={event => this.setState({ requestText: event.target.value })}
         />
+        </div>
         <button onClick={this.sendRequest}>Send Request</button>
         {this.state.error && (
           <div style={{ color: "red" }}>{this.state.error}</div>
