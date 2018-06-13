@@ -15,7 +15,7 @@ let port = process.env.PORT || 8080
 // send a string to all requestors 
 app.get('*/:text', (request, response) => {
   console.log(`🍆 somebody said: ${request.params.text}`)
-  response.send(`hey hey hey, I'm an express server yay`)
+  response.send(`😎 you said: ${request.params.text}`)
 })
 
 // get the server's public ip
