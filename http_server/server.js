@@ -5,6 +5,10 @@ let publicIp = require('public-ip')
 let express = require('express')
 let app = express()
 
+// middleware to add "cors" headers
+let cors = require('cors')
+app.use(cors())
+
 // PORT from environment variable with default
 let port = process.env.PORT || 8080
 
