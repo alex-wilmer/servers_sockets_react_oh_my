@@ -35,11 +35,13 @@ class App extends React.Component {
           />
         </div>
         <div>
-        <b>message: </b>
-        <input
-          value={this.state.requestText}
-          onChange={event => this.setState({ requestText: event.target.value })}
-        />
+          <b>message: </b>
+          <input
+            value={this.state.requestText}
+            onChange={event =>
+              this.setState({ requestText: event.target.value })
+            }
+          />
         </div>
         <button onClick={this.sendRequest}>Send Request</button>
         {this.state.error && (
